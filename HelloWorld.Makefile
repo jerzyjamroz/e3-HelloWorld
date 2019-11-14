@@ -48,13 +48,18 @@ include $(E3_REQUIRE_CONFIG)/DECOUPLE_FLAGS
 ## Exclude linux-ppc64e6500
 ##EXCLUDE_ARCHS += linux-ppc64e6500
 ##EXCLUDE_ARCHS += linux-corei7-poky
-
+# USER
+# ====
 # APP:=calcApp
 # APPDB:=$(APP)/Db
 # APPSRC:=$(APP)/src
 
+APP:=HelloWorldApp
+APPDB:=$(APP)/Db
+APPSRC:=$(APP)/src
 
 # USR_INCLUDES += -I$(where_am_I)$(APPSRC)
+USR_INCLUDES += -I$(where_am_I)$(APPSRC)
 
 # USR_CFLAGS   += -Wno-unused-variable
 # USR_CFLAGS   += -Wno-unused-function
@@ -67,7 +72,7 @@ include $(E3_REQUIRE_CONFIG)/DECOUPLE_FLAGS
 # TEMPLATES += $(wildcard $(APPDB)/*.db)
 # TEMPLATES += $(wildcard $(APPDB)/*.proto)
 # TEMPLATES += $(wildcard $(APPDB)/*.template)
-
+TEMPLATES += $(wildcard $(APPDB)/*.db)
 
 # DBDINC_SRCS += $(APPSRC)/swaitRecord.c
 # DBDINC_SRCS += $(APPSRC)/sseqRecord.c
@@ -102,10 +107,12 @@ include $(E3_REQUIRE_CONFIG)/DECOUPLE_FLAGS
 # SOURCES += $(APPSRC)/aCalcMonitorMem.c
 # # DBDINC_SRCS should be last of the series of SOURCES
 # SOURCES += $(DBDINC_SRCS)
+SOURCES += $(APPSRC)/devAiSecond.c
 
 # DBDS += $(APPSRC)/calcSupport_LOCAL.dbd
 # DBDS += $(APPSRC)/calcSupport_withSNCSEQ.dbd
 # DBDS += $(APPSRC)/calcSupport_withSSCAN.dbd
+DBDS += $(APPSRC)/aiSecond.dbd
 
 #
 # $(DBDINC_DEPS): $(DBDINC_HDRS)
