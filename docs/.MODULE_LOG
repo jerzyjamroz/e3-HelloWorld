@@ -1,0 +1,28 @@
+>>
+Script is used     : e3TemplateGenerator.bash
+Script Path        : /home/jerzy/git/e3/e3-tools/e3TemplateGenerator
+Script Version     : 1.0.6
+Script Run Time    : 2019Nov14-0943-47CET
+User               : jerzy
+e3-tools Hash      : 4a086ce
+>>
+>> git diff 
+
+>>
+>> git diff --cached
+
+>>
+>> git diff HEAD
+
+
+>>
+>> Your sources are located in e3-HelloWorld.
+>> 
+EPICS_MODULE_NAME  : HelloWorld
+E3_MODULE_SRC_PATH : HelloWorld
+E3_TARGET_URL      : https://github.com/jerzyjamroz
+>> 
+e3 module name     : e3-HelloWorld
+e3 target url full : https://github.com/jerzyjamroz/e3-HelloWorld.git
+>> 
+e3 module is located in siteMods
