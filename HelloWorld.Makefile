@@ -107,12 +107,12 @@ TEMPLATES += $(wildcard $(APPDB)/*.db)
 # SOURCES += $(APPSRC)/aCalcMonitorMem.c
 # # DBDINC_SRCS should be last of the series of SOURCES
 # SOURCES += $(DBDINC_SRCS)
-SOURCES += $(APPSRC)/devAiSecond.c
+SOURCES += $(APPSRC)/testProc.cpp
 
 # DBDS += $(APPSRC)/calcSupport_LOCAL.dbd
 # DBDS += $(APPSRC)/calcSupport_withSNCSEQ.dbd
 # DBDS += $(APPSRC)/calcSupport_withSSCAN.dbd
-DBDS += $(APPSRC)/aiSecond.dbd
+DBDS += $(APPSRC)/testProc.dbd
 
 #
 # $(DBDINC_DEPS): $(DBDINC_HDRS)
